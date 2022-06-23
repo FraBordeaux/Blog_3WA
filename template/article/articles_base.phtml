@@ -1,0 +1,43 @@
+<h1>Liste des Articles</h1>
+
+<?php
+
+    $render_tbody="";
+    
+    if( !count($params["articles"]) )
+    { $render_tbody = "<tr> <td> Aucun article </td>"; 
+}
+    // iterate over array by index and by name
+    foreach($params["articles"] as $key => $article) {
+    
+        $render_tbody .= 
+        "<tr> <td>" . $article->getId() ."</td>
+            <td>" . $article->getTitle() ."</td>
+            <td>" . $article->getPublishedDate() ."</td> </tr>";
+    }
+?>
+
+<section>
+    <table class="articles_table">
+    
+        <thead>
+            <tr>
+                <th colspan="3">Titre du tableau</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>Titre</td>
+                <td>Date de publication</td>
+            </tr>
+    
+            <?php
+                echo $render_tbody;
+            ?>
+        </tbody>
+    
+    </table>
+</section>
+
