@@ -1,0 +1,31 @@
+body{
+    background-color : #bada55;
+    text-align:center;
+};
+
+main{
+    display:flex;
+    justify-content: center;
+
+}
+
+section{
+    display:flex;
+    justify-content: center;
+}
+
+.articles_table{
+    width: 100%;
+    text-align:center;
+    align-self:center;
+    background-color:beige;
+    margin-top:20px;
+}
+
+.user_add_form{
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    flex-direction:column;   
+    width: 40%;
+}
